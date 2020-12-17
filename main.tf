@@ -4,9 +4,6 @@ variable "length" {
   default = 3
 }
 
-# Depend on datadog to trigger a provider warning
-provider "datadog" { }
-
 # A useless resource for no particular reason
 resource "random_pet" "nonsense" {
   length = var.length
