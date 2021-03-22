@@ -8,6 +8,7 @@ variable "length" {
 resource "random_pet" "nonsense" {
   length = var.length
   separator = " "
+  keepers = { uuid = uuid() }
 }
 
 output "words" {
