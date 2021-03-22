@@ -11,7 +11,7 @@ resource "random_pet" "nonsense" {
   keepers = { uuid = uuid() }
 
   provisioner "local-exec" {
-    command = "echo sleeping && sleep 32 && echo done"
+    command = "echo sleeping && sleep 12 && echo still sleeping && sleep 12 && echo almost done && sleep 12 && echo done"
   }
 
   provisioner "local-exec" {
