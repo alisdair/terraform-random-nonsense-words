@@ -9,6 +9,10 @@ resource "random_pet" "nonsense" {
   length = var.length
   separator = " "
   keepers = { uuid = uuid() }
+
+  provisioner "local-exec" {
+    command = "sleep 12"
+  }
 }
 
 output "words" {
